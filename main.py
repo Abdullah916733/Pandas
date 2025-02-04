@@ -13,9 +13,13 @@ disList = {'ID': pd.Series([1, 2, 3]), 'Name': ['a', 'b', 'c']}
 df3 = pd.DataFrame(disList)
 # print(df3)
 
-csFile = pd.read_csv('C:\\Users\\test\Documents\\learn ML & AI\\pandas\\annual-enterprise.csv', nrows=1)
+csFile = pd.read_csv('annual-enterprise.csv', nrows=6, dtype={'Year':'float64'})
 # print(csFile.columns)
 # print(csFile)
+
+
+csFile1 = pd.read_csv('annual-enterprise.csv', nrows=500)
+print(csFile1.isnull().sum())
 
 
 
