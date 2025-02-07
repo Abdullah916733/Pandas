@@ -1,5 +1,4 @@
 import pandas as pd
-import os
 
 lst = ['a', 'b', 'c', 'd']
 df1 = pd.DataFrame(lst)
@@ -13,14 +12,16 @@ disList = {'ID': pd.Series([1, 2, 3]), 'Name': ['a', 'b', 'c']}
 df3 = pd.DataFrame(disList)
 # print(df3)
 
-csFile = pd.read_csv('annual-enterprise.csv', nrows=6, dtype={'Year':'float64'})
+csFile = pd.read_csv('student_results.csv', nrows=6, dtype={'Year':'float64'})
 # print(csFile.columns)
 # print(csFile)
 
 
-csFile1 = pd.read_csv('annual-enterprise.csv', nrows=500)
-print(csFile1.isnull().sum())
+csFile1 = pd.read_csv('student_results.csv', nrows=500)
+# print(csFile1.isnull().sum())
 
 
+df = pd.read_csv('student.csv')
+print(df)
 
-
+print(df.interpolate())
